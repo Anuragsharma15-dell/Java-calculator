@@ -23,6 +23,14 @@ public class Test{
         if(userAnswer == answer[i]){
             System.out.println("Correct!");
             score++;
+            if(score == question.length){
+                System.out.println("Congratulations! You answered all questions correctly!");
+            }if(score<question.length){
+                System.out.println("Your current score is: " + score);
+            }if(question.length<0){
+                System.out.println("It cannot be less than 0");
+            }
+            System.out.println(score);
         } else {
             System.out.println("Wrong! The correct answer is " + answer[i]);
         }
