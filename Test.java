@@ -1,43 +1,50 @@
 import java.util.Scanner;
 
+
 public class Test{
     public static void main(String [] args){
-        System.out.println("Welcome to the Quiz Game!");
-        System.out.println("Press Enter to start...");
         Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
-        System.out.println("Quiz game started!");
-        String question [] = {
-            "What is the capital of France?\n(a) Berlin\n(b) Madrid\n(c) Paris\n(d) Rome",
-            "What is 2 + 2?\n(a) 3\n(b) 4\n(c) 5\n(d) 6",
-            "Which planet is known as the Red Planet?\n(a) Earth\n(b) Mars\n(c) Jupiter\n(d) Saturn"
-        };
-        char answer[] = {'c','b' ,'b'};
-        int score = 0;
 
-
-        for(int i=0; i<question.length; i++){
-        System.out.println(question[i]);
-        System.out.print("Your answer: ");
-        char userAnswer = scanner.next().charAt(0);
-        if(userAnswer == answer[i]){
-            System.out.println("Correct!");
-            score++;
-            if(score == question.length){
-                System.out.println("Congratulations! You answered all questions correctly!");
-            }if(score<question.length){
-                System.out.println("Your current score is: " + score);
-            }if(question.length<0){
-                System.out.println("It cannot be less than 0");
-            }
-            System.out.println(score);
-        } else {
-            System.out.println("Wrong! The correct answer is " + answer[i]);
-        }
-    }    scanner.close();
-        
-    }
+   
     
 
+    
+      
+      
+         String choice ;
+          System.out.println("Enter your choice(1, , 2 , 3 ,4)");
+        System.out.println();
 
+        System.out.println("Enter user choice");
+     String User;
+     User   = scanner.next();
+
+     System.out.println("Enter computer choice");
+     String Computer;
+     Computer = scanner.next();
+
+
+
+         
+          choice = scanner.next();
+          switch (choice) {
+            case "1":if(User.equals("Rock")&& Computer.equals("Scissor")) System.out.println("User wins ");
+                
+                break;
+                case "2":if(User.equals("Paper")&& Computer.equals("Scissor")) System.out.println("Computer wins  ");
+                    break;
+                    case"3" :if(User.equals("Scissor")&& Computer.equals("Rock")) System.out.println("Computer wins");
+                    break;
+
+                   
+            case "4":if(User.equals("Scissor")&& Computer.equals("Paper")) System.out.println("User wins  ");
+                
+                break;
+               
+          
+            default:
+                break;
+          }
+        
+    }
 }
